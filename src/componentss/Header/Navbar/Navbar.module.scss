@@ -1,0 +1,30 @@
+@use '../../../colors.scss' as colors;
+
+.navbar {
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+
+        li {
+            margin: 0 16px;
+
+            a {
+                color: colors.$pincColor;
+                font-weight: 500;
+                transition: color .5s ease;
+
+                &:hover {
+                    color: colors.$whiteBlueColor
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+}

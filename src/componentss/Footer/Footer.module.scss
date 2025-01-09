@@ -1,0 +1,48 @@
+@use '../../colors.scss' as colors;
+.footer {
+    background-color: colors.$bluecolor;
+    padding: 2rem 0;
+    margin-top: auto;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+  
+  .copyright {
+    color: colors.$pincColor;
+  }
+  
+  .links {
+    display: flex;
+    gap: 2rem;
+    
+    a {
+      color: colors.$pincColor;;
+      text-decoration: none;
+      transition: color 0.5s;
+      
+      &:hover {
+        color: colors.$yellowColor;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }

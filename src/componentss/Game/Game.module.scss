@@ -1,0 +1,45 @@
+@use '../../colors.scss' as colors;
+.game {
+    background: linear-gradient(135deg, colors.$blueSec1, colors.$blueSec2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+    
+    .frame {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0 1rem;
+        
+        iframe {
+            width: 1000px;
+            height: 700px;
+            max-width: 100%;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(colors.$whiteBlueColor, 0.3),
+                        0 0 60px rgba(colors.$pincColor, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(colors.$whiteBlueColor, 0.4),
+                            0 0 80px rgba(colors.$pincColor, 0.3);
+            }
+            
+            @media (max-width: 1024px) {
+                height: 600px;
+            }
+            
+            @media (max-width: 768px) {
+                height: 500px;
+            }
+            
+            @media (max-width: 480px) {
+                height: 400px;
+            }
+        }
+    }
+}
