@@ -1,15 +1,16 @@
 {
+  "homepage": "https://Vlad-islav8.github.io/Neon-bricks",
   "name": "testproject",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "js-cookie": "^3.0.5",
