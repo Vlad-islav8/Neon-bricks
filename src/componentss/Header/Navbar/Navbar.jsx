@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom'
 import styles from './Navbar.module.scss'
 export default function Navbar() {
     return(
         <nav className={styles.navbar}>
             <ul>
                 <li>
-                    <a href="/">Главная</a>
+                    <Link to="/">Главная</Link>
                 </li>
                 <li>
-                    <a href="/politics">Политика конфедециальности</a>
+                    <Link to="/politics">Политика конфедециальности</Link>
                 </li>
             </ul>
         </nav>
